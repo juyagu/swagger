@@ -4,6 +4,7 @@ var utils = require('../utils/writer.js');
 var Usuario = require('../service/UsuarioService');
 
 module.exports.obtenerAlumnos = function obtenerAlumnos (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   var searchString = req.swagger.params['searchString'].value;
   var skip = req.swagger.params['skip'].value;
   var limit = req.swagger.params['limit'].value;

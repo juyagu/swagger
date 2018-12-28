@@ -5,6 +5,8 @@ var fs = require('fs'),
     http = require('http');
 
 var app = require('connect')();
+var cors = require('cors');
+app.use(cors());
 var swaggerTools = require('swagger-tools');
 var jsyaml = require('js-yaml');
 var serverPort = 8080;
